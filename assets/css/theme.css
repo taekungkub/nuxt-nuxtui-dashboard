@@ -1,6 +1,8 @@
 :root {
   --color-app: #505f79;
   --header-height: 60px;
+  --ui-background: "";
+  --ui-foreground: "";
 }
 
 html.dark {

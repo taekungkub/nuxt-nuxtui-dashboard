@@ -57,13 +57,11 @@ const items = [
 
 <style>
 .light body {
-  color: var(--color-app);
-  @apply bg-white;
+  @apply text-gray-700 bg-white;
 }
 
 .dark body {
-  color: var(--color-app);
-  @apply bg-gray-900;
+  @apply text-gray-200 bg-gray-900;
 }
 .sepia body {
   background-color: #f1e7d0;
