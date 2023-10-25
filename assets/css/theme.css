@@ -1,0 +1,8 @@
+:root {
+  --color-app: #505f79;
+  --header-height: 60px;
+}
+
+html.dark {
+  --color-app: #ebf4f1;
+}
