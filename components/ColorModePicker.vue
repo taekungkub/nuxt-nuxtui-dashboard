@@ -55,16 +55,4 @@ const items = [
 ]
 </script>
 
-<style>
-.light body {
-  @apply text-gray-700 bg-white;
-}
-
-.dark body {
-  @apply text-gray-200 bg-gray-900;
-}
-.sepia body {
-  background-color: #f1e7d0;
-  color: #433422;
-}
-</style>
+<style lang="scss" scoped></style>

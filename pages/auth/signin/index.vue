@@ -46,6 +46,7 @@ useHead({
 })
 
 definePageMeta({
+  layout: "empty",
   middleware: "auth", //Global middleware disalbed
   auth: {
     unauthenticatedOnly: true,

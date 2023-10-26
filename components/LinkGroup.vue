@@ -6,15 +6,12 @@
     </li>
     <div>
       <div class="wrapper" v-for="(subItem, index) in item.childrens" :key="index">
-        <div class="item-wrapper">
-          <NuxtLink :to="subItem.path" class="item" active-class="!text-primary-400">
-            <div>
-              <Icon :name="subItem.icon" class="icon" :size="'1.225rem'"></Icon>
-            </div>
-
-            <div>{{ subItem.title }}</div>
-          </NuxtLink>
-        </div>
+        <NuxtLink :to="subItem.path" class="item" :class="isActiveLink(subItem.path)">
+          <span>
+            <Icon :name="subItem.icon" class="icon" :size="'1.225rem'"></Icon>
+          </span>
+          <span>{{ subItem.title }}</span>
+        </NuxtLink>
       </div>
     </div>
   </div>
@@ -33,15 +30,22 @@ const props = defineProps({
     }>,
   },
 })
+const route = useRoute()
+
+function isActiveLink(myRoute: string) {
+  if (route.fullPath.startsWith(myRoute)) {
+    return "!text-primary-500"
+  }
+}
 </script>
 
 <style lang="scss" scoped>
 .menu {
   .wrapper {
-    @apply w-full flex flex-col  my-1   p-3 rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800;
+    @apply w-full flex flex-col  my-1;
 
     .item {
-      @apply flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400;
+      @apply flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400  p-3 rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800;
 
       .icon {
         @apply ms-auto transform transition-transform duration-200;

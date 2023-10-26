@@ -20,6 +20,15 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  layout: "empty",
+  middleware: "auth", //Global middleware disalbed
+  auth: {
+    unauthenticatedOnly: true,
+    navigateAuthenticatedTo: "/profile",
+  },
+})
+
 const formState = reactive({
   email: "",
   displayname: "",

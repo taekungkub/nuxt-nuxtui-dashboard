@@ -21,13 +21,15 @@
             <a class="text-sm/6 font-semibold flex items-center gap-1 hover:text-primary" href="/pro">Pro </a>
           </li>
         </ul> -->
-        <div class="hidden md:flex items-center justify-end lg:flex-1 gap-1.5">
+        <div class="hidden lg:flex items-center justify-end lg:flex-1 gap-1.5">
           <UButton :variant="'ghost'" size="sm" icon="i-heroicons-swatch-20-solid" color="primary"> </UButton>
-          <UButton :variant="'ghost'" size="sm" icon="i-heroicons-magnifying-glass-20-solid" color="gray"> </UButton>
+          <UTooltip text="Search" :shortcuts="['⌘', 'K']">
+            <UButton :variant="'ghost'" size="sm" icon="i-heroicons-magnifying-glass-20-solid" color="gray"> </UButton>
+          </UTooltip>
           <ColorModePicker />
         </div>
 
-        <div class="flex md:hidden">
+        <div class="flex lg:hidden">
           <UButton :variant="'ghost'" size="sm" icon="i-heroicons-bars-3 " color="gray" @click="emit('toggle')"> </UButton>
         </div>
       </div>

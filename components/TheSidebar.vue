@@ -3,7 +3,7 @@
     v-model="isOpen"
     :side="'left'"
     :ui="{
-      base: 'p-3 overflow-y-auto',
+      base: 'p-3 overflow-y-auto rounded-r-lg	',
       width: 'w-screen max-w-[300px]',
     }"
   >

@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     "@morev/vue-transitions/nuxt",
     "@pinia/nuxt",
     "@nuxt/content",
+    "@nuxt/image",
   ],
   css: ["@/assets/css/theme.css", "@/assets/css/main.css"],
   ui: {
@@ -32,15 +33,7 @@ export default defineNuxtConfig({
       theme: "github-light",
     },
   },
-  router: {
-    //@ts-ignore
-    extendRoutes(routes) {
-      // Add a route for the custom error page
-      routes.push({
-        name: "custom-error",
-        path: "/404",
-        component: "~/layouts/NotFound.vue",
-      })
-    },
+  routeRules: {
+    "/": { redirect: "/home" },
   },
 })

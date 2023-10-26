@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <LinkGroup :items="menus" />
-  </div>
+  <LinkGroup :items="menus" />
 </template>
 
 <script setup lang="ts">
@@ -12,7 +10,7 @@ const menus = ref([
       {
         icon: "bxs:home",
         title: "Home",
-        path: "/",
+        path: "/home",
       },
     ],
   },
@@ -48,6 +46,26 @@ const menus = ref([
     ],
   },
   {
+    title: "",
+    childrens: [
+      {
+        icon: "bxs:shopping-bags",
+        title: "Products",
+        path: "/products",
+      },
+    ],
+  },
+  {
+    title: "",
+    childrens: [
+      {
+        icon: "bxs:shopping-bags",
+        title: "Orders",
+        path: "/orders",
+      },
+    ],
+  },
+  {
     title: "Auth",
     childrens: [
       {
@@ -57,12 +75,12 @@ const menus = ref([
       },
 
       {
-        icon: "i-heroicons-moon",
+        icon: "bxs:cookie",
         title: "Signup",
         path: "/auth/signup",
       },
       {
-        icon: "i-heroicons-moon",
+        icon: "bxs:skull",
         title: "Forgotpassword",
         path: "/auth/forgotpassword",
       },
