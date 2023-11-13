@@ -4,7 +4,17 @@ import defaultColors from "tailwindcss/colors"
 export default <Partial<Config>>{
   content: ["docs/content/**/*.md"],
   theme: {
-    extend: {},
+    extend: {
+      textColor: {
+        hr: "var(--color-hr)",
+      },
+      backgroundColor: {
+        background: "var(--color-background)",
+      },
+      borderColor: {
+        border: "var(--color-border)",
+      },
+    },
     colors: {
       ...defaultColors,
       heart: {
@@ -20,8 +30,20 @@ export default <Partial<Config>>{
         "900": "#4b05ad",
         "950": "#2c0076",
       },
+      success: Object.assign(defaultColors.emerald, {
+        DEFAULT: defaultColors.emerald[400],
+      }),
+      danger: Object.assign(defaultColors.rose, {
+        DEFAULT: defaultColors.rose[500],
+      }),
       warning: Object.assign(defaultColors.amber, {
-        DEFAULT: defaultColors.amber[500],
+        DEFAULT: defaultColors.amber[400],
+      }),
+      tertialy: Object.assign(defaultColors.neutral, {
+        DEFAULT: defaultColors.neutral[300],
+      }),
+      accent: Object.assign(defaultColors.indigo, {
+        DEFAULT: defaultColors.indigo[400],
       }),
     },
   },

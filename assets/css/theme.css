@@ -1,19 +1,27 @@
 :root {
   --color-app: #505f79;
   --header-height: 60px;
+
+  --color-background: theme(colors.white);
+  --color-border: theme(colors.gray.200);
+  --color-hr: theme(colors.neutral.200);
 }
 
 html.dark {
   --color-app: #ebf4f1;
+
+  --color-background: theme(colors.gray.900);
+  --color-border: theme(colors.gray.800);
+  --color-hr: theme(colors.neutral.800);
 }
 
 @layer {
   .light body {
-    @apply text-gray-700 bg-white;
+    @apply text-gray-700 bg-background;
   }
 
   .dark body {
-    @apply text-gray-200 bg-gray-900;
+    @apply text-gray-200 bg-background;
   }
   .sepia body {
     background-color: #f1e7d0;

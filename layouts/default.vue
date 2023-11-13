@@ -9,9 +9,7 @@
     <main class="min-h-[calc(100vh-var(--header-height))]">
       <div class="flex flex-col lg:grid lg:grid-cols-10">
         <div class="lg:col-span-2">
-          <aside
-            class="hidden overflow-y-auto border-r border-gray-200 dark:border-gray-800 h-screen lg:block lg:max-h-[calc(100vh-var(--header-height))] lg:sticky lg:top-[--header-height] p-2"
-          >
+          <aside class="hidden overflow-y-auto border-r border-border h-screen lg:block lg:max-h-[calc(100vh-var(--header-height))] lg:sticky lg:top-[--header-height] p-2">
             <NavLinkGroup />
           </aside>
         </div>

@@ -4,11 +4,72 @@
       <h2>Button</h2>
       <div class="flex items-center gap-2">
         <UButton color="primary">primary</UButton>
-        <UButton color="teal"> teal</UButton>
-        <UButton color="yellow"> yellow</UButton>
-        <UButton color="rose"> rose</UButton>
-        <UButton color="heart"> heart</UButton>
-        <UButton color="warning"> warning</UButton>
+        <UButton color="heart">heart</UButton>
+        <UButton color="success">success</UButton>
+        <UButton color="danger">danger</UButton>
+        <UButton color="warning">warning</UButton>
+        <UButton color="tertialy">tertialy</UButton>
+        <UButton color="accent">accent</UButton>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <UButton color="primary" variant="ghost">primary</UButton>
+        <UButton color="heart" variant="ghost">heart</UButton>
+        <UButton color="success" variant="ghost">success</UButton>
+        <UButton color="danger" variant="ghost">danger</UButton>
+        <UButton color="warning" variant="ghost">warning</UButton>
+        <UButton color="tertialy" variant="ghost">tertialy</UButton>
+        <UButton color="accent" variant="ghost">accent</UButton>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <UButton color="primary" variant="outline">primary</UButton>
+        <UButton color="heart" variant="outline">heart</UButton>
+        <UButton color="success" variant="outline">success</UButton>
+        <UButton color="danger" variant="outline">danger</UButton>
+        <UButton color="warning" variant="outline">warning</UButton>
+        <UButton color="tertialy" variant="outline">tertialy</UButton>
+        <UButton color="accent" variant="outline">accent</UButton>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <UButton color="primary" variant="link">primary</UButton>
+        <UButton color="heart" variant="link">heart</UButton>
+        <UButton color="success" variant="link">success</UButton>
+        <UButton color="danger" variant="link">danger</UButton>
+        <UButton color="warning" variant="link">warning</UButton>
+        <UButton color="tertialy" variant="link">tertialy</UButton>
+        <UButton color="accent" variant="link">accent</UButton>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <UButton color="primary" variant="soft">primary</UButton>
+        <UButton color="heart" variant="soft">heart</UButton>
+        <UButton color="success" variant="soft">success</UButton>
+        <UButton color="danger" variant="soft">danger</UButton>
+        <UButton color="warning" variant="soft">warning</UButton>
+        <UButton color="tertialy" variant="soft">tertialy</UButton>
+        <UButton color="accent" variant="soft">accent</UButton>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <UButton color="primary" variant="solid" loading>primary</UButton>
+        <UButton color="heart" variant="solid" loading>heart</UButton>
+        <UButton color="success" variant="solid" loading>success</UButton>
+        <UButton color="danger" variant="solid" loading>danger</UButton>
+        <UButton color="warning" variant="solid" loading>warning</UButton>
+        <UButton color="tertialy" variant="solid" loading>tertialy</UButton>
+        <UButton color="accent" variant="solid" loading>accent</UButton>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <UButton color="primary" variant="soft" disabled>primary</UButton>
+        <UButton color="heart" variant="soft" disabled>heart</UButton>
+        <UButton color="success" variant="soft" disabled>success</UButton>
+        <UButton color="danger" variant="soft" disabled>danger</UButton>
+        <UButton color="warning" variant="soft" disabled>warning</UButton>
+        <UButton color="tertialy" variant="soft" disabled>tertialy</UButton>
+        <UButton color="accent" variant="soft" disabled>accent</UButton>
       </div>
 
       <br />
@@ -34,26 +95,26 @@
       </div>
       <TransitionFade>
         <div v-if="isFade">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat placeat ea ab sapiente saepe numquam dicta facilis repellat, laborum laudantium in natus
-          provident veritatis vitae ipsam ducimus officiis, repellendus illo?
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat placeat ea ab sapiente saepe numquam dicta facilis repellat, laborum laudantium in natus provident veritatis vitae ipsam
+          ducimus officiis, repellendus illo?
         </div>
       </TransitionFade>
       <TransitionScale>
         <div v-if="isScale">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat placeat ea ab sapiente saepe numquam dicta facilis repellat, laborum laudantium in natus
-          provident veritatis vitae ipsam ducimus officiis, repellendus illo?
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat placeat ea ab sapiente saepe numquam dicta facilis repellat, laborum laudantium in natus provident veritatis vitae ipsam
+          ducimus officiis, repellendus illo?
         </div>
       </TransitionScale>
       <TransitionExpand>
         <div v-if="isExpand">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat placeat ea ab sapiente saepe numquam dicta facilis repellat, laborum laudantium in natus
-          provident veritatis vitae ipsam ducimus officiis, repellendus illo?
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat placeat ea ab sapiente saepe numquam dicta facilis repellat, laborum laudantium in natus provident veritatis vitae ipsam
+          ducimus officiis, repellendus illo?
         </div>
       </TransitionExpand>
       <TransitionSlide>
         <div v-if="isSlide">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat placeat ea ab sapiente saepe numquam dicta facilis repellat, laborum laudantium in natus
-          provident veritatis vitae ipsam ducimus officiis, repellendus illo?
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat placeat ea ab sapiente saepe numquam dicta facilis repellat, laborum laudantium in natus provident veritatis vitae ipsam
+          ducimus officiis, repellendus illo?
         </div>
       </TransitionSlide>
 
@@ -90,8 +151,8 @@
           </template>
 
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium, quam blanditiis. Expedita deserunt vitae suscipit commodi nostrum, fugiat explicabo
-            sunt blanditiis ut quod, sit dolores optio illum aut rem voluptatum?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium, quam blanditiis. Expedita deserunt vitae suscipit commodi nostrum, fugiat explicabo sunt blanditiis ut quod, sit
+            dolores optio illum aut rem voluptatum?
           </p>
 
           <template #footer>
