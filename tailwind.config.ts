@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss"
 import defaultColors from "tailwindcss/colors"
+import defaultTheme from "tailwindcss/defaultTheme"
 
 export default <Partial<Config>>{
   content: ["docs/content/**/*.md"],
@@ -13,6 +14,9 @@ export default <Partial<Config>>{
       },
       borderColor: {
         border: "var(--color-border)",
+      },
+      borderRadius: {
+        default: "0.75rem",
       },
     },
     colors: {
@@ -45,6 +49,10 @@ export default <Partial<Config>>{
       accent: Object.assign(defaultColors.indigo, {
         DEFAULT: defaultColors.indigo[400],
       }),
+    },
+    screens: {
+      xs: "370px",
+      ...defaultTheme.screens,
     },
   },
   plugins: [require("@tailwindcss/typography")],

@@ -1,7 +1,11 @@
 <template>
-  <main>
+  <div>
     <UContainer>
       <ContentDoc :path="$route.path" />
     </UContainer>
-  </main>
+  </div>
 </template>
+
+<script setup lang="ts"></script>
+
+<style scoped></style>
