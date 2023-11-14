@@ -3,25 +3,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   alias: {},
-  modules: [
-    "@nuxt/ui",
-    "@sidebase/nuxt-auth",
-    "@formkit/auto-animate/nuxt",
-    "@nuxtjs/color-mode",
-    "nuxt-icon",
-    "@morev/vue-transitions/nuxt",
-    "@pinia/nuxt",
-    "@nuxt/content",
-    "@nuxt/image",
-  ],
+  modules: ["@nuxt/ui", "@sidebase/nuxt-auth", "@formkit/auto-animate/nuxt", "@nuxtjs/color-mode", "nuxt-icon", "@morev/vue-transitions/nuxt", "@pinia/nuxt", "@nuxt/content", "@nuxt/image"],
   css: ["@/assets/css/theme.css", "@/assets/css/main.css"],
   ui: {
     global: true,
     // icons: ["mdi", "simple-icons"],
   },
   auth: {
-    //@ts-ignore
-    origin: process.env.ORIGIN,
+    baseURL: process.env.AUTH_ORIGIN,
     globalAppMiddleware: false, //if true now pages will require sign-in.
   },
   vueTransitions: {

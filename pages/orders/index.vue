@@ -2,16 +2,31 @@
   <UContainer>
     <h2>Orders</h2>
     <UCard class="mt-4">
-      <div class="my-2"><UInput v-model="q" placeholder="Filter people..." /></div>
+      <div class="flex my-4 justify-between">
+        <USelectMenu v-model="selectedColumns" :options="columns" multiple placeholder="Columns" />
+        <UInput v-model="q" placeholder="Filter people..." />
+      </div>
       <UTable
-        :columns="columns"
+        v-model="selected"
+        :columns="selectedColumns"
         :rows="currentRecord"
-        :sort="{ column: 'title' }"
+        :sort="{ column: 'title', direction: 'desc' }"
         sort-asc-icon="i-heroicons-arrow-up-20-solid"
         sort-desc-icon="i-heroicons-arrow-down-20-solid"
-        :sort-button="{ icon: 'i-heroicons-sparkles-20-solid', color: 'primary', square: false }"
-      />
-      <UPagination v-model="page" :page-count="5" :total="people.length" class="mt-4" />
+      >
+        <template #name-data="{ row }">
+          <span :class="[selected.find((person) => person.id === row.id) && 'text-primary-500 dark:text-primary-400']">{{ row.name }}</span>
+        </template>
+
+        <template #actions-data="{ row }">
+          <UDropdown :items="items(row)">
+            <UButton color="gray" variant="ghost" icon="i-heroicons-ellipsis-horizontal-20-solid" />
+          </UDropdown>
+        </template>
+      </UTable>
+      <div class="flex justify-center border-t border-border pt-4">
+        <UPagination v-model="page" :page-count="pageCount" :total="people.length" />
+      </div>
     </UCard>
   </UContainer>
 </template>
@@ -21,6 +36,7 @@ const columns = [
   {
     key: "id",
     label: "ID",
+    sortable: false,
   },
   {
     key: "name",
@@ -41,6 +57,10 @@ const columns = [
   {
     key: "role",
     label: "Role",
+    sortable: false,
+  },
+  {
+    key: "actions",
   },
 ]
 
@@ -90,6 +110,7 @@ const people = [
 ]
 
 const q = ref("")
+
 const filteredRows = computed(() => {
   if (!q.value) {
     return people
@@ -101,8 +122,10 @@ const filteredRows = computed(() => {
   })
 })
 
+const selectedColumns = ref([...columns])
 const page = ref(1)
 const pageCount = 5
+const selected = ref<typeof people>([])
 
 const currentRecord = computed(() => {
   return filteredRows.value.slice((page.value - 1) * pageCount, page.value * pageCount)
@@ -116,6 +139,36 @@ watch(
     }
   }
 )
+
+const items = (row) => [
+  [
+    {
+      label: "Edit",
+      icon: "i-heroicons-pencil-square-20-solid",
+      click: () => console.log("Edit", row.id),
+    },
+    {
+      label: "Duplicate",
+      icon: "i-heroicons-document-duplicate-20-solid",
+    },
+  ],
+  [
+    {
+      label: "Archive",
+      icon: "i-heroicons-archive-box-20-solid",
+    },
+    {
+      label: "Move",
+      icon: "i-heroicons-arrow-right-circle-20-solid",
+    },
+  ],
+  [
+    {
+      label: "Delete",
+      icon: "i-heroicons-trash-20-solid",
+    },
+  ],
+]
 </script>
 
 <style scoped></style>

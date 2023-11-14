@@ -24,7 +24,7 @@
   "dependencies": {
     "@formkit/auto-animate": "^0.8.0",
     "@morev/vue-transitions": "^2.3.6",
-    "@nuxt/ui": "^2.9.0",
+    "@nuxt/ui": "^2.10.0",
     "@pinia/nuxt": "^0.5.1",
     "next-auth": "^4.21.1",
     "pinia": "^2.1.7",

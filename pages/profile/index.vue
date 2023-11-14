@@ -6,9 +6,11 @@
     <div v-if="status === 'loading'">Loading...</div>
     <div v-else>
       <pre v-if="status"><span>Status:</span> {{ status }}</pre>
-      {{ data?.user?.email }}
-      <!-- <pre v-if="csrfToken"><span>CSRF Token:</span> {{ csrfToken }}</pre>
-    <pre v-if="providers"><span>Providers:</span> {{ providers }}</pre> -->
+      <p>
+        {{ data?.user }}
+      </p>
+      <pre v-if="csrfToken"><span>CSRF Token:</span> {{ csrfToken }}</pre>
+      <pre v-if="providers"><span>Providers:</span> {{ providers }}</pre>
 
       <UButton variant="outline" color="red" @click="signOut()">Loout</UButton>
     </div>

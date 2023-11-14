@@ -120,7 +120,7 @@
 
       <br />
 
-      <h2 class="rounded-default bg-warning p-2">Modal</h2>
+      <h2>Modal</h2>
 
       <div class="flex items-center gap-2">
         <UButton label="Basic" @click="isOpen = true" />

@@ -3,7 +3,7 @@ import { NuxtAuthHandler } from "#auth"
 
 export default NuxtAuthHandler({
   // a) Never hardcode your secret in your code!! and b) use a secure secret, `test-123` is **not** secure!!
-  secret: process.env.NUXT_SECRET ?? "test-123",
+  secret: process.env.AUTH_SECRET || "my-auth-secret",
   pages: {
     // Change the default behavior to use `/login` as the path for the sign-in page
     signIn: "/auth/signin",
