@@ -143,7 +143,7 @@
       </article>
 
       <UModal v-model="isOpen">
-        <UCard :ui="{ divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
+        <UCard>
           <template #header>
             <div class="flex gap-2 items-center justify-between">
               <h2>Modal Title</h2>

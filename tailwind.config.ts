@@ -34,6 +34,9 @@ export default <Partial<Config>>{
         "900": "#4b05ad",
         "950": "#2c0076",
       },
+      primary: Object.assign(defaultColors.teal, {
+        DEFAULT: defaultColors.teal[400],
+      }),
       success: Object.assign(defaultColors.emerald, {
         DEFAULT: defaultColors.emerald[400],
       }),
@@ -51,8 +54,12 @@ export default <Partial<Config>>{
       }),
     },
     screens: {
-      xs: "370px",
+      xxs: "370px",
+      xs: "475px",
       ...defaultTheme.screens,
+    },
+    fontFamily: {
+      kanit: ["Kanit", "sans-serif"],
     },
   },
   plugins: [require("@tailwindcss/typography")],

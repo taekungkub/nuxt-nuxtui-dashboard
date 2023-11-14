@@ -6,14 +6,7 @@
         <USelectMenu v-model="selectedColumns" :options="columns" multiple placeholder="Columns" />
         <UInput v-model="q" placeholder="Filter people..." />
       </div>
-      <UTable
-        v-model="selected"
-        :columns="selectedColumns"
-        :rows="currentRecord"
-        :sort="{ column: 'title', direction: 'desc' }"
-        sort-asc-icon="i-heroicons-arrow-up-20-solid"
-        sort-desc-icon="i-heroicons-arrow-down-20-solid"
-      >
+      <UTable v-model="selected" :columns="selectedColumns" :rows="currentRecord" :sort="{ column: 'title', direction: 'desc' }">
         <template #name-data="{ row }">
           <span :class="[selected.find((person) => person.id === row.id) && 'text-primary-500 dark:text-primary-400']">{{ row.name }}</span>
         </template>
