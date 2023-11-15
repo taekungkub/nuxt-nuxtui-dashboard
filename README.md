@@ -79,3 +79,4 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 ![plot](https://cdn.pic.in.th/file/picinth/Screen-Shot-2566-10-25-at-17.30.02.png)
 
 ![plot](https://cdn.pic.in.th/file/picinth/Screen-Shot-2566-10-26-at-13.10.08.png)
+# nuxt-dashboard
