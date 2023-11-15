@@ -76,7 +76,4 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 ### Example
 
-![plot](https://cdn.pic.in.th/file/picinth/Screen-Shot-2566-10-25-at-17.30.02.png)
-
-![plot](https://cdn.pic.in.th/file/picinth/Screen-Shot-2566-10-26-at-13.10.08.png)
-# nuxt-dashboard
+[![Screen-Shot-2566-11-15-at-13.27.16.png](https://img5.pic.in.th/file/secure-sv1/Screen-Shot-2566-11-15-at-13.27.16.png)](https://pic.in.th/image/T0ADON)
